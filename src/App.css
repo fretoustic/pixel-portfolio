@@ -1,0 +1,266 @@
+/* Preserve existing styles */
+.container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #21b02d;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+  z-index: 10;
+  padding: 0 20px;
+  background-color: #21b02d;
+  animation: slideIn 3s ease-out forwards, fadeIn 3s ease-out forwards;
+}
+.center2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+  z-index: 10;
+  padding: 0 20px;
+  background-color: #8f8f8f;
+  animation: slideIn 3s ease-out forwards, fadeIn 3s ease-out forwards;
+}
+.center3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+  z-index: 10;
+  padding: 0 20px;
+  background-color: #f39c12;
+  animation: slideIn 3s ease-out forwards, fadeIn 3s ease-out forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translate(50%, -50%);
+  }
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.center h1,.center2 h1 ,.center3 h1{
+  font-size: 64px;
+  margin: 0;
+  color: #000;
+  font-weight: bold;
+  font-family: dots;
+}
+
+.center h2 ,.center2 h2,.center3 h2{
+  font-size: 48px;
+  margin: 10px 0;
+  color: #555;
+  font-weight: normal;
+  font-family: dots;
+  opacity: 0;
+  animation: fadeIn 3s ease-out forwards 1s;
+}
+
+.center h2:nth-child(2) {
+  animation-delay: 1s;
+}
+
+.word {
+  font-weight: 300;
+  font-family: dots;
+  color: #b8b8b8;
+  z-index: 1;
+  opacity: 0;
+  animation: fadeIn 3s ease-out forwards 2s;
+}
+
+@font-face {
+  font-family: "retro";
+  src: url("src/assets/PixelifySans-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "dots";
+  src: url("/Users/harshs-blrm25/harsh-ev/portfolio/src/assets/Doto-VariableFont_ROND,wght.ttf");
+}
+
+/* New styles for multi-page scrolling */
+.app {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.page-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.page-wrapper.active {
+  opacity: 1;
+  z-index: 1;
+  pointer-events: auto;
+}
+
+.page-wrapper.inactive {
+  z-index: 0;
+  pointer-events: none;
+}
+
+.page-one {
+  background-color: #21b02d;
+}
+
+.page-two {
+  background-color: #8f8f8f;
+}
+
+.page-three {
+  background-color: #f39c12;
+}
+.bottom-div {
+  position: absolute;
+  bottom: 20px; /* Adjust this value for spacing from the bottom */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #21b02d;
+  padding: 20px;
+  text-align: center;
+}
+.bottom-div-2 {
+  position: absolute;
+  bottom: 20px; /* Adjust this value for spacing from the bottom */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #8f8f8f;
+  padding: 20px;
+  text-align: center;
+}
+.bottom-div-3 {
+  position: absolute;
+  bottom: 20px; /* Adjust this value for spacing from the bottom */
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgb(171, 108, 171);
+  padding: 20px;
+  text-align: center;
+}
+
+
+
+.bottom-div h2 {
+  font-family: dots;
+  opacity: 0;
+  animation: fadeIn 3s ease-out forwards 2s;
+}
+.bottom-div-2 h2 {
+  font-family: dots;
+  opacity: 0;
+  animation: fadeIn 3s ease-out forwards 2s;
+}
+.bottom-div-3 h2 {
+  font-family: dots;
+  opacity: 0;
+  animation: fadeIn 3s ease-out forwards 2s;
+}
+
+.arrow-image {
+  width: 30px; /* Adjust size as needed */
+  height: auto;
+  transform: rotate(90deg);
+  opacity: 0;
+  animation: fadeIn 3s ease-out forwards 6s;
+}
+
+.typing-effect {
+  font-family: "dots";
+  font-size: 48px;
+  margin: 10px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  border-right: 2px solid #555; /* Simulates a cursor */
+  animation: typing 2s steps(30, end), blink 0.7s step-end infinite;
+}
+
+/* Typing animation */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%; /* Ensures full text is revealed */
+  }
+}
+
+/* Cursor blink animation */
+@keyframes blink {
+  from {
+    border-color: transparent;
+  }
+  to {
+    border-color: #555;
+  }
+}
+
+
+/*for page 3*/
+.container1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  background: rgb(171, 108, 171);
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 33.33%;
+  text-align: center;
+}
+
+.image {
+  width: 200px; /* Adjust the size of the image */
+  height: 200px; /* Adjust the size of the image */
+}
+
+.text {
+  margin: 0;
+  padding: 0;
+  font-family: dots;
+  font-weight: 600;
+  font-size: 40px;
+}
+.text1 {
+  margin: 0;
+  padding: 0;
+  font-family: dots;
+  font-weight: 300;
+  font-size: 30px;
+}

@@ -1,0 +1,41 @@
+/* CenteredText.css */
+.bakcground{
+
+    display: flex;
+    background-color: #00ff00;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0; /* Optional background color */
+    overflow: hidden; /* Ensure anything out of bounds is hidden */
+  }
+  
+  .retrotext {
+    font-size: 5rem;
+    font-weight: bold;
+    color:black;
+    font-family: retro;
+    opacity: 0;  /* Initially hidden */
+    transform: translateX(10vw); /* Start from 30% of the viewport width (right of center) */
+    animation: fadeInMove 2s ease-out forwards; /* Trigger the animation */
+  }
+  
+  /* Keyframe animation for fading and moving */
+  @keyframes fadeInMove {
+    0% {
+      opacity: 0;
+      transform: translateX(90vw); /* Start near the center but to the right */
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0); /* End at the center of the screen */
+    }
+  }
+  
+@font-face {
+    font-family: 'retro';
+    src: url('src/assets/PixelifySans-VariableFont_wght.ttf');
+}
